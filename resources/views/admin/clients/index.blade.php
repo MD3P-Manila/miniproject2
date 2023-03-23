@@ -11,36 +11,35 @@
 
         <div class="card mt-3">
             <div class="card-body">
-                <div class="d-flex"></div>
-                <h1>Clients<small class="text-muted">LIST</small></h1>
-                <div class="ml-auto">
-
+                <div class="d-flex">
+                    <h1>Clients<small class="text-muted"> LIST</small></h1>
+                        <div class="ms-auto col-sm-2 col-xs-2 col-md-2 col-lg-2">
                     <div class="dropdown">
                         <button class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown button
-                        </a>
-                      
+                          Actions
+                        </button>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="{{route('admin.clients.create')}}">Create Client</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <a class="dropdown-item" href="#">Something else here</a>
+                          {{-- <a class="dropdown-item" href="{{ route ('admin.clients.create') }}">Create Client</a> --}}
+                          <a class="dropdown-item" href="{{ route('admin.clients.create') }}">{{ __('Create Client') }}</a>
+                          {{-- <a class="dropdown-item" href="#">Another action</a> --}}
+                          {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
                         
                       </div>
                 </div>
             </div>
-        </div> 
+        </div>
+    </div>
                 
-                
-        @if ($clients->count())
+     @if ($clients->count())
         {{ $clients->links() }}
         @foreach ($clients as $client)
-            @include('admin.clients.partials.prospect-card', ['client' => $client])
+            @include('admin.clients.partials.client-card', ['client' => $client])
         @endforeach
     @endif
 
 
 
-                {{--<@if ($clients->count())
+                {{-- @if ($clients->count())
                     <table class ="table table-hover">
                         <thead>
                             <tr>
@@ -56,13 +55,12 @@
                             <tr>
                                 <td>{{$client->name}}</td>
                                 <td>{{$client->email}}</td>
-                                <td>{{date ('F d, Y @ h:i:s', strtotime($client->created_at))}}</td>
+                                <td>{{$client->pretty_Created}}</td>
                             </tr>
                             @endforeach
                         </tbody>
-                @endif--}}
-
-    </div>
+                    </table>
+                @endif --}}
     
-</div>
+        </div>
 @endsection
