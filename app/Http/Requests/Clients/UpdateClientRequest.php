@@ -4,14 +4,14 @@ namespace App\Http\Requests\Clients;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreClientRequest extends FormRequest
+class UpdateClientRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
      */
-    public function authorize(): bool
+    public function authorize()
     {
-        return true;
+        return $this->user();
     }
 
     /**
@@ -19,15 +19,11 @@ class StoreClientRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
-    public function rules(): array
+    public function rules()
     {
         return [
+            'email' => 'required|unique:clients,email,'. $this->client->id,
             'name' => 'required',
-            'email' => 'required|unique:clients',
-            'profile_image' => 'nullable|mimes:png,jpg,jpeg|max:2000',
-
-
-
         ];
     }
 }
