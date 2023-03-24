@@ -1,4 +1,4 @@
-<div class="card mt-3 prospect-card">
+<div class="card mt-3 client-card">
     <div class="card-body">
         <div class="row">
             <div class="col-sm-3 col-md-2">
@@ -21,10 +21,9 @@
                       Actions
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a href="{{ route('admin.prospects.prospect.dashboard', ['prospect' => $prospect->id]) }}" class="dropdown-item">Prospect Dashboard</a>
-                        <a class="dropdown-item" href="{{ route('admin.prospects.edit', ['prospect' => $prospect->id]) }}">Edit Prospect</a>
-                        <a class="dropdown-item" href="{{ route('admin.prospects.activities.dashboard', ['prospect' => $prospect->id]) }}">View Activity</a>
-
+                        <a href="{{ route('admin.clients.dashboard', ['client' => $client->id]) }}" class="dropdown-item">Prospect Dashboard</a>
+                        <a class="dropdown-item" href="{{ route('admin.clients.edit', ['client' => $client->id]) }}">Edit Prospect</a>
+                        <
                     </div>
                 </div>
             </div>

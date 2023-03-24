@@ -13,7 +13,7 @@
             <div class="card-body">
                 <div class="d-flex"></div>
                 <h1>Clients<small class="text-muted">LIST</small></h1>
-                <div class="ml-auto">
+                <div class="ms-auto">
 
                     <div class="dropdown">
                         <button class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -34,7 +34,7 @@
         @if ($clients->count())
         {{ $clients->links() }}
         @foreach ($clients as $client)
-            @include('admin.clients.partials.prospect-card', ['client' => $client])
+            @include('admin.partials.client-card', ['client' => $client])
         @endforeach
     @endif
 

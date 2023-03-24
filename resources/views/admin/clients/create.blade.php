@@ -4,24 +4,23 @@
     <div class="container">
         <div class="card mt-3">
             <div class="card-body">
-                <div class="d-flex"></div>
+                <div class="d-flex">
                     <h1>Create <small class="text-muted">Client</small></h1>
-                        <div class="ml-auto">
+                        <div class="ms-auto">
 
                             <div class="dropdown">
-                                <button class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                  Actions
-                                </a>
+                                </button>
                       
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item" href="{{route('admin.clients.dashboard')}}">dashboard"</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <<a class="dropdown-item" href="#">Something else here</a>
+                                        
                         
                                     </div>
                             </div>
                      </div>
-
+                </div>
                             @if($errors->count())
                             <div class="alert alert-danger">
                                 @foreach ($errors->all() as $message)

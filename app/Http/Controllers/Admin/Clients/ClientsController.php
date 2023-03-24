@@ -27,6 +27,12 @@ class ClientsController extends Controller
         return view ('admin.clients.create');
     }
 
+
+    public function createContact(Client $client)
+    {
+        return view('admin.clients.contact', compact('client'));
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -47,7 +53,9 @@ class ClientsController extends Controller
      */
     public function show(Client $client)
     {
-        return $client->load('contact');
+        /*return $client->load('contact');*/
+
+        return view('admin.clients.show', ['client' => $client]);
     }
     
     /**

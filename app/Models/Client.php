@@ -17,7 +17,7 @@ class Client extends Model
     }
     
 
-    public function getPrettyCreatedAttribute()
+    public function getCoolDateFormatAttribute()
     {
         return date('F d, Y', strtotime($this->created_at));
     }
