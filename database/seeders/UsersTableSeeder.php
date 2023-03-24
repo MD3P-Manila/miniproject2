@@ -14,9 +14,10 @@ class UsersTableSeeder extends Seeder
     public function run(): void
     {
         User::updateOrCreate(['id' => 1], [
-            'name' => 'Andrew Manila',
-            'email' => 'andrewM@email.com',
+            'name' => 'Khaizan',
+            'email' => 'khaizan@yahoo.com',
             'password' => '$2y$10$vsrewpmZs3ThxeIb6m4/1OwOFGMbR0wo3DZ22amXKeBsjCNzmJ7Ve' //Password
         ]);
+
     }
 }

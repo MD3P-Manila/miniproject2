@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Clients\Contacts\StoreContactRequest;
 use App\Http\Requests\Clients\Contacts\UpdateContactRequest;
 
-class ClientsContactsController extends Controller
+class ClientContactsController extends Controller
 {
     public function create(Client $client)
     {
