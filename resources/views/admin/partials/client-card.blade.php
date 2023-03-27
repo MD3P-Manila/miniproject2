@@ -12,7 +12,7 @@
                 <h5>{{ $client->name }}</h5>
                 <ul class="list-style-none">
                     <li><strong>Email:</strong> {{ $client->email}}</li>
-                    <li><strong>Date Added:</strong> {{ $client->pretty_created }}</li>
+                    <li><strong>Date Added:</strong> {{ $client->cool_date_format }}</li>
                 </ul>
             </div>
             <div class="col-sm-3 col-md-2">
@@ -21,8 +21,8 @@
                       Actions
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                        <a href="{{ route('admin.clients.dashboard', ['client' => $client->id]) }}" class="dropdown-item">Prospect Dashboard</a>
-                        <a class="dropdown-item" href="{{ route('admin.clients.edit', ['client' => $client->id]) }}">Edit Prospect</a>
+                        <a href="{{ route('admin.clients.dashboard', ['client' => $client->id]) }}" class="dropdown-item">Client Dashboard</a>
+                        <a class="dropdown-item" href="{{ route('admin.clients.edit', ['client' => $client->id]) }}">Edit Client</a>
                         <
                     </div>
                 </div>
