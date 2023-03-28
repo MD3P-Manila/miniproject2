@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    
     <!-- Fonts -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -16,10 +16,15 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoW
 
+    
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+
 </head>
 <body>
+    
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -84,7 +89,8 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-4" style="background-color: #6f4ef5">
+            
             @yield('content')
         </main>
     </div>
