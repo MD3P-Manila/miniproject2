@@ -4,13 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Clients\ClientsController;
 use App\Http\Controllers\Admin\Clients\ClientContactsController;
 
-
-//Prefix: clients
-//name: admin.clients.create
-
-
 Route::get('/', [ClientsController::class, 'index'])->name('dashboard');
+
+//Created route by Ken Kevin Tajonera
 Route::get('create', [ClientsController::class, 'create'])->name('create');
+
 Route::get('{client}/edit', [ClientsController::class, 'edit'])->where('client', '[0-9]+')->name('edit');
 Route::get('{client}', [ClientsController::class, 'show'])->where('client', '[0-9]+')->name('show');
 Route::post('/', [ClientsController::class, 'store'])->name('store');
