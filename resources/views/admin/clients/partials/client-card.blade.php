@@ -5,14 +5,14 @@
                 @if ($client->profile_image)
                     <img src="{{ Storage::url($client->profile_image) }}" style="max-width: 100%; max-height: 100px;" alt="">
                 @else
-                    <img src="/images/hi.png" style="max-width: 100%; max-height: 100px;" alt="">
+                    <img src="/images/user.png" style="max-width: 100%; max-height: 100px;" alt="">
                 @endif
             </div>
             <div class="col-sm-6 col-md-8">
                 <h5>{{ $client->name }}</h5>
                 <ul class="list-style-none">
                     <li><strong>Email:</strong> {{ $client->email}}</li>
-                    <li><strong>Date Added:</strong> {{ $client->CoolDateFormat }}</li>
+                    <li><strong>Date Added:</strong> {{ $client->pretty_created }}</li>
                 </ul>
             </div>
             <div class="col-sm-3 col-md-2">
