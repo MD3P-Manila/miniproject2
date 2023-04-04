@@ -14,6 +14,8 @@ Route::get('{client}/edit', [ClientsController::class, 'edit'])->where('client',
 Route::get('{client}', [ClientsController::class, 'show'])->where('client', '[0-9]+')->name('show');
 Route::put('{client}', [ClientsController::class, 'update'])->where('client', '[0-9]+')->name('update');
 Route::put('{client}/profile-image', [ClientsController::class, 'updateProfileImage'])->where('client', '[0-9]+')->name('update.profile-image');
+
+//Created route by Khaizan Bagood
 Route::delete('{client}', [ClientsController::class, 'destroy'])->where('client', '[0-9]+')->name('delete');
 Route::delete('{client}/profile-image', [ClientsController::class, 'destroyProfileImage'])->where('client', '[0-9]+')->name('delete.profile-image');
 
