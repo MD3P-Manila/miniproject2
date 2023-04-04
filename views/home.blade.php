@@ -33,8 +33,8 @@
     <div class="container grid">
         <div class="text-container">
             <h1 class="h1-large">Welcome To Our Page</h1>
-            <p>A client management system (CMS) is a software platform that helps businesses manage 
-                their interactions with clients or customers.At its core, a CMS is designed to help 
+            <p>A client data management system (CDMS) is a software platform that helps businesses manage 
+                their interactions with clients or customers.At its core, a CDMS is designed to help 
                 businesses build and maintain strong relationships with their clients. This is achieved 
                 through features such as contact management, lead tracking, and customer segmentation™</p>
             <form action="" method="">

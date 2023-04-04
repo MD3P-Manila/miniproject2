@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Clients\ClientsController;
 use App\Http\Controllers\Admin\Clients\ClientContactsController;
 
+//login auth
 Route::get('/', [ClientsController::class, 'index'])->name('dashboard');
 
 //Created route by Ken Kevin Tajonera
