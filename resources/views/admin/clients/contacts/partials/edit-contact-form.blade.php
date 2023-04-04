@@ -1,3 +1,5 @@
+<!-- created by Michael Bonifacio -->
+<!-- this part allows users to edit the details of client -->
 
 
 <form action="{{ route('admin.clients.contacts.update', $client->id) }}" method="POST">
@@ -67,7 +69,7 @@
     <div class="form-group">
         <label for="" class="col-md-3">Additional Notes</label>
         <div class="col-md-9">
-            <textarea name="notes" cols="90" rows="10" class="fom-control">{{ $contact->notes}}"</textarea>
+            <textarea name="notes" cols="40" rows="10" class="fom-control">{{ $contact->notes}}</textarea>
         </div>
     </div>
 
