@@ -37,12 +37,7 @@
                 their interactions with clients or customers.At its core, a CMS is designed to help 
                 businesses build and maintain strong relationships with their clients. This is achieved 
                 through features such as contact management, lead tracking, and customer segmentation™</p>
-            <form action="" method="">
-                <div class="form-group">
-                    <input type="email" class="form-control"  placeholder="Search">
-                </div>
-                <button type="submit" class="form-control-submit-button">Subscribe</button>
-            </form>
+
         </div> <!-- end of text-container -->
         <div class="image-container">
             <img src="/images/logo.png" alt="maker">
